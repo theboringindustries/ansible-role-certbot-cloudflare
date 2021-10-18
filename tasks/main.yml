@@ -2,7 +2,7 @@
 # tasks file for certbot-cloudflare
 
 - name: Get software for apt repository management.
-  apt: name={{ item }} state=present
+  apt: name={{ item }} state=present update_cache=yes
   with_items:
     - build-essential
     - curl
